@@ -2,8 +2,6 @@
   <header>
     <h1>{{ title }}</h1>
     <TaskButton text="Add Task" color="green" />
-    <TaskButton text="Update Task" color="black" />
-    <TaskButton text="Delete Task" color="red" />
   </header>
 </template>
 
@@ -14,7 +12,6 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
       default: "Task Tracker",
     },
   },
