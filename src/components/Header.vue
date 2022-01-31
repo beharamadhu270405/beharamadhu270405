@@ -1,12 +1,16 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <TaskButton text="Add Task" color="green" />
+    <AddTaskButton
+      @toggle-add-task-button="$emit('toggle-add-task-button')"
+      text="Add Task"
+      color="green"
+    />
   </header>
 </template>
 
 <script>
-import TaskButton from "./TaskButton.vue";
+import AddTaskButton from "./AddTaskButton.vue";
 export default {
   name: "Header",
   props: {
@@ -16,7 +20,7 @@ export default {
     },
   },
   components: {
-    TaskButton,
+    AddTaskButton,
   },
 };
 </script>
